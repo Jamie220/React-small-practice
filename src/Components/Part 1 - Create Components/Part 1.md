@@ -2,7 +2,7 @@
 
 ### Function component
 
-`
+```JavaScript
 const component = () => (
 <div>Learn React</div>
     
@@ -21,10 +21,10 @@ function component (){
 <div>Learn React</div>
     );
 }
-`
+```
 
 ### Class Compoent 
-`
+```JavaScript
 class Header extends Component {
     render() {
         return (
@@ -33,4 +33,4 @@ class Header extends Component {
     }
 
 }
-`
+```
