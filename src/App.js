@@ -3,7 +3,7 @@ import React from 'react';
 
 
 import './App.css';
-import CreateCompoents from './Components/Part 1 - Create Components/CreateComponents';
+import CreateCompoents from './Components/Beginner for React/CreateComponents';
 
 
 function App() {
