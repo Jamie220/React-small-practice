@@ -23,7 +23,7 @@ class CreateCompoents extends Component {
             <div>
                 <Body2 />
             </div>
-            </>
+            </>  
         );
     }
 }
