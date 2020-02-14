@@ -3,4 +3,5 @@
 
 ## Beginner for React
     - create React.js Components
-    - 
+    - Passing Data in React.js
+    - Importing Components
