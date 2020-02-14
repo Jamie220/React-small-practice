@@ -5,4 +5,4 @@
 
  function --> using `props` to passing data
 
- class --> using `this.props` to passing data
+class --> using `this.props` to passing data
