@@ -8,44 +8,47 @@ class MyForm extends React.Component {
         email: '',
         isChecked: false,
         selection: 'Mr',
+        comments: ''
     };
 
-    nameChangeHandler = event => {
-        this.setState({ name: event.target.value })
+    changeHandler = event => {
+        const isCheckbox = event.target.type === 'checkbox';
+        this.setState({ [event.target.name]:
+                        isCheckbox ? 
+                        event.target.checked:
+                        event.target.value })
     }
 
-    emailChangeHandler = event => {
-        this.setState({ email: event.target.value })
+
+    checkedHandler = event => {
+        this.setState({ isChecked: event.target.checked })
     }
 
-    checkedHandler = e => {
-        this.setState({ isChecked: e.target.checked })
-    }
 
-    selectionHandler = e => {
-        this.setState({selection: e.target.value})
-    }
-
-    submitHandler = () => {
+    submitHandler = event => {
+        event.preventDefault();
         console.log(this.state)
     }
     render() {
 
         return (
-            <div className="App">
-                <div><label>Name:</label> <input type="name" value={this.state.name} onChange={this.nameChangeHandler} /></div>
-                <div><label>email:</label> <input type="email" value={this.state.email} onChange={this.emailChangeHandler} /></div>
-                <div><label>is checked:</label> <input type="checkbox" checked={this.state.isChecked} onChange={this.checkedHandler} /></div>
+            <form className="App" onSubmit={this.submitHandler}>
+                <div><label>Name:</label> <input name="name"  value={this.state.name} onChange={this.changeHandler} /></div>
+                <div><label>email:</label> <input name="email" value={this.state.email} onChange={this.changeHandler} /></div>
+                <div><label>is checked:</label> <input name="isChecked" type="checkbox" checked={this.state.isChecked} onChange={this.checkedHandler} /></div>
                 <div>
-                    <select value={this.state.selection} onChange={this.selectionHandler}>
+                    <select name="selection" value={this.state.selection} onChange={this.changeHandler}>
                         <option>Mr.</option>
                         <option>Miss.</option>
                         <option>Mrs.</option>
                         <option>Ms.</option>
                     </select>
                 </div>
-                <button onClick={this.submitHandler}>Submit</button>
-            </div>
+                <div>
+                    <textarea name="comments"value={this.state.comments} onChange={this.changeHandler} />
+                </div>
+                <button>Submit</button>
+            </form>
         );
     }
 }
