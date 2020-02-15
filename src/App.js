@@ -20,12 +20,13 @@ class App extends React.Component {
 
   render () {
     const bottonText = this.state.isVisiable ? 'HIDE' : 'SHOW';
-    const slider = this.state.isVisiable ? <ImageSlider /> : <div>I am hiden now!</div>
+    const visiableCounter = <div className ={!this.state.isVisiable? "visiable" : "hidden"}> <Counter countNumber={0} /></div>
+    const slider = this.state.isVisiable ? <ImageSlider /> : visiableCounter
 
   return (
     <div>
       <CreateCompoents />
-      <Counter countNumber={4}/>
+      {/* <Counter countNumber={4}/> */}
       {slider}
     <button onClick={this.visiableHandler}>{bottonText}</button>
 
