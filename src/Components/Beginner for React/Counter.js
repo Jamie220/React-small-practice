@@ -24,6 +24,22 @@ export class Counter extends React.Component {
     //     //you have to bind this function if you didn't use arrow function
     // }    
 
+    // componentWillMount(){
+    //     console.log('will mount -- unmounting');
+    // }
+
+    componentDidMount(){
+        console.log('didMount --- mounting');
+    }
+
+    componentWillUnmount(){
+        console.log('willUnount --- mounted');
+    } 
+
+    // componentWillUpdate (){
+    //     console.log('willUpate')
+    // }
+
     increaseHandler = () =>{
             this.setState({
                 count: this.state.count + 1
