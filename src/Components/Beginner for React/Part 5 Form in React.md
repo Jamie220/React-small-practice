@@ -20,7 +20,7 @@ changeHandler = (event, nameField, isCheckbox) => {
 <div><label>is checked:</label> <input  type="checkbox" checked={this.state.isChecked } onChange={event => this.checkedHandler(event,'checkbox', true)} /></div>
 ```
 
-if we want to get ride off the inline fucntion which it have passing the params in event listener. we can use `name ='name'` attribute in JAX
+if we want to get rid off the inline fucntion which it have passing the params in event listener. we can use `name ='name'` attribute in JAX
 like:
 ```JavaScript
     changeHandler = (event, isCheckbox ) => {
