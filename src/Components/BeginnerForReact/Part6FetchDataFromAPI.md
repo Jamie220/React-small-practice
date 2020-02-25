@@ -1,16 +1,18 @@
 # Part 6 Fetch data from API in React
 
-The best place to fetch the data from API in React is `componentDidMount()` 
+The best place to fetch the data from API in React is `componentDidMount()`
 
 ## How it is work?
 
 `render()` --> `componentDidMount()` --> `render()`
 
-## The best place to understan lifecyle in React
+### The best place to understan lifecyle in React
+
 [official react lifecycle diagram](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)
 
 
-## using Asycn await 
+## using Asycn await
+
 ```JavaScript
     async componentDidMount() {
         const url = "https://api.randomuser.me/";
