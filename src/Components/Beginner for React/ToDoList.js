@@ -17,7 +17,8 @@ export default class TodoList extends React.Component {
 
     state = {
         todos: [],
-        todoToShow: "all"
+        todoToShow: "all",
+        toggleAllCompleted: true
     };
 
     addTodo = todo => {
@@ -92,6 +93,16 @@ export default class TodoList extends React.Component {
                     </div>)
                     : null
                 }
+                <div><button 
+                onClick={()=> this.setState({
+                    todos: this.state.todos.map(todo=>({
+                        ...todo,
+                        complete: this.state.toggleAllCompleted
+                    })),
+                    toggleAllCompleted: !this.state.toggleAllCompleted
+                })}>
+                    toggle all complete: {`${this.state.toggleAllCompleted}`}
+                    </button></div>
             </div>
         );
     }
