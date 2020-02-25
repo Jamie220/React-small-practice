@@ -3,10 +3,10 @@ import React from 'react';
 
 
 import './App.css';
-import MyForm from './Components/Beginner for React/MyForm';
-import ValiationForm from './Components/Beginner for React/ValiationForm';
-import FetchRandomUsers from './Components/Beginner for React/FetchRandomUsers';
-import TodoList from './Components/Beginner for React/TodoList';
+import MyForm from './Components/BeginnerForReact/MyForm';
+import ValiationForm from './Components/BeginnerForReact/ValiationForm';
+import FetchRandomUsers from './Components/BeginnerForReact/FetchRandomUsers';
+import TodoList from './Components/BeginnerForReact/TodoList';
 
 // import CreateCompoents from './Components/Beginner for React/CreateComponents';
 // import { Counter } from './Components/Beginner for React/Counter';
