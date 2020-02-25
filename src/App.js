@@ -49,7 +49,7 @@ class App extends React.Component {
 
       // </div>
       <div>
-        <div>
+        <div className="App">
           {visiableBeginnerCourseHaader}
           <button onClick={this.visiableHandler}>{bottonText}</button>
           {visiableBeginnerCourse}
