@@ -13,7 +13,7 @@ export default class ToDoForm extends React.Component {
 
     submitHandler = event => {
         event.preventDefault();
-        this.props.onSubmit({
+        this.props.onSubmitTodos({
             id: shortid.generate(),
             todoItems: this.state.todoItems,
             complete: false
