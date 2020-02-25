@@ -16,34 +16,47 @@ import TodoList from './Components/BeginnerForReact/TodoList';
 class App extends React.Component {
 
   state = {
-    isVisiable: true
+    isVisiable: false
   };
 
   visiableHandler = () => {
-    this.setState({isVisiable : !this.state.isVisiable})
+    this.setState(state =>({ isVisiable: !state.isVisiable }))
   }
 
-  render () {
-    // const bottonText = this.state.isVisiable ? 'HIDE' : 'SHOW';
-    // const visiableCounter = <div className ={!this.state.isVisiable? "visiable" : "hidden"}> <Counter countNumber={0} /></div>
+  render() {
+    const bottonText = this.state.isVisiable ? 'HIDE' : 'SHOW'
+    // const visiableCounter = <div className ={!this.state.isVisiable? "visiable" : "hidden"}> 
+    // <Counter countNumber={0} /></div>
     // const slider = this.state.isVisiable ? <ImageSlider /> : visiableCounter
-
-  return (
-    // <div>
-    //   {/* <CreateCompoents />
-    //   {/* <Counter countNumber={4}/> */}
-    //   {slider}
-    // <button onClick={this.visiableHandler}>{bottonText}</button> */}
-
-    // </div>
-    <div>
-      <MyForm />
-      <ValiationForm />
-      <FetchRandomUsers />
-      <TodoList />
+    const visiableBeginnerCourseHaader = <div className={!this.state.isVisiable ? "visiable" : "hidden"}>
+          <h3>Beginner For React</h3>
     </div>
-    
-  );
+
+    const visiableBeginnerCourse = <div className={!this.state.isVisiable ? "hidden" : "visiable"}>
+          <MyForm />
+          <ValiationForm />
+          <FetchRandomUsers />
+          <TodoList />
+          
+    </div>
+
+    return (
+      // <div>
+      //   {/* <CreateCompoents />
+      //   {/* <Counter countNumber={4}/> */}
+      //   {slider}
+      // <button onClick={this.visiableHandler}>{bottonText}</button> */}
+
+      // </div>
+      <div>
+        <div>
+          {visiableBeginnerCourseHaader}
+          <button onClick={this.visiableHandler}>{bottonText}</button>
+          {visiableBeginnerCourse}
+        </div>
+      </div>
+
+    );
   }
 }
 
